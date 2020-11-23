@@ -16,8 +16,8 @@ jobs:
         run: mvn -B package --file pom.xml
       - uses: docker/build-push-action@v1
         with:
-          username: ${{ yankor0750784 }}
-          password: ${{ Yanko0101 }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
           repository: myorg/myrepository
           tag: latest
         
